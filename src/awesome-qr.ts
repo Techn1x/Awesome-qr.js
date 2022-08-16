@@ -854,10 +854,10 @@ export class AwesomeQR {
       const format = this.options.gifBackground ? "gif" : "png";
 
       if (isElement(this.canvas)) {
-        return Promise.resolve(this.canvas.toDataURL(format));
+        return Promise.resolve(this.canvas.toDataURL('png'));
       }
 
-      return Promise.resolve(this.canvas.toBuffer(format));
+      return Promise.resolve(this.canvas.toBuffer('png'));
     }
   }
 }
